@@ -159,7 +159,7 @@ blog_serve <- function(
   output = c(".", rep("_posts", length(list.dirs("_source")))),
   ...
 ){
-  servr::jekyll(input = input, output = output, serve = TRUE, ...)
+  servr::jekyll(input = input, output = output, serve = TRUE, command = '/.rvm/gems/ruby-2.3.0/wrappers/jekyll build')
 }
 
 
@@ -170,7 +170,7 @@ blog_gen <- function(
   output = c(".", rep("_posts", length(list.dirs("_source")))),
   ...
 ){
-  servr::jekyll(input = input, output = output, serve = FALSE, ...)
+  servr::jekyll(input = input, output = output, serve = FALSE, command = '/.rvm/gems/ruby-2.3.0/wrappers/jekyll build')
 }
 
 #' @rdname blog_serve
@@ -181,7 +181,7 @@ site_gen <- function(
              rep('_posts', length(list.dirs('_source')))),
   ...
 ){
-  servr::jekyll(input = input, output = output, serve = FALSE, ...)
+  servr::jekyll(input = input, output = output, serve = FALSE, command = '/.rvm/gems/ruby-2.3.0/wrappers/jekyll build')
 }
 
 #' @rdname blog_serve
@@ -192,7 +192,7 @@ site_serve <- function(
              rep('_posts', length(list.dirs('_source')))),
   ...
 ){
-  servr::jekyll(input = input, output = output, serve = TRUE, ...)
+  servr::jekyll(input = input, output = output, serve = TRUE, command = '/.rvm/gems/ruby-2.3.0/wrappers/jekyll build')
 }
 
 #' Push a blog post live (possibly)
